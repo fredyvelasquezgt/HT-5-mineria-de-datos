@@ -188,3 +188,13 @@ Modelo para comparar con la predicción.
 ```{r}
 #Calculo de rmse para ver si tenemos overfitting, mientras mas cercano a 0 mayor overffiting.
 rmse(test$Economica,prediccion)
+
+```
+Se observa que se obtuvo un RMSE alejado de 0, siendo **0.3571591**, indicando que este modelo no tiene overfitting.
+
+```{r warning=FALSE}
+train_numerico<-train[,c('TotalBsmtSF','MasVnrArea', 'Economica','YearRemodAdd','GrLivArea','WoodDeckSF')]
+modeloCaret<-train(Economica~.,trControl=trainControl('none'),
+                   train_numerico,
+                   method='glm',family='binomial')
+varImp(modeloCaret)
