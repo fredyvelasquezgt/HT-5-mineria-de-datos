@@ -201,3 +201,5 @@ varImp(modeloCaret)
 
 En el gráfico anterior se observa que solo 3 de las variables tienen buena correlación, sobre todo la variable **YearRemodAdd**, sin embargo, las variables **TotalBsmtSF** y **GrLivArea** tienen una correlación bastabte correcta. Mientras que las variables **WoodDeckSF** y **MasVnrArea**, son las peores, sobre todo la ultima varaible. 
 
+#### 9. ¿Hay alguna forma de mejorar los modelos usando parámetros?¿ Serviría usar regularización en el caso de los modelos creados? 
+
