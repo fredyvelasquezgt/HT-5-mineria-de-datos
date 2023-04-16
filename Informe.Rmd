@@ -174,3 +174,7 @@ pred<-predict(modelo,newdata = test[,c('TotalBsmtSF','MasVnrArea','YearRemodAdd'
 prediccion<-ifelse(pred>=0.5,1,0)
 confusionMatrix(as.factor(test$Economica),as.factor(prediccion))
 ```
+
+Este modelo tuvo una precision de **87.24%**, o bien de **0.8724** tal y como se observa en la matriz de confusión mostrada anteriormente, indicando que fue una prediccion medianamente buena. A continuación se observará si tiene overfitting o no. 
+
+```{r}
