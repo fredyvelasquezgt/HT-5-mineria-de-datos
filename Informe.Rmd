@@ -198,3 +198,6 @@ modeloCaret<-train(Economica~.,trControl=trainControl('none'),
                    train_numerico,
                    method='glm',family='binomial')
 varImp(modeloCaret)
+
+En el gráfico anterior se observa que solo 3 de las variables tienen buena correlación, sobre todo la variable **YearRemodAdd**, sin embargo, las variables **TotalBsmtSF** y **GrLivArea** tienen una correlación bastabte correcta. Mientras que las variables **WoodDeckSF** y **MasVnrArea**, son las peores, sobre todo la ultima varaible. 
+
