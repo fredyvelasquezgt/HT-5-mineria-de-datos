@@ -178,3 +178,13 @@ confusionMatrix(as.factor(test$Economica),as.factor(prediccion))
 Este modelo tuvo una precision de **87.24%**, o bien de **0.8724** tal y como se observa en la matriz de confusión mostrada anteriormente, indicando que fue una prediccion medianamente buena. A continuación se observará si tiene overfitting o no. 
 
 ```{r}
+
+#Modelo para verificar overfitting
+trainPredict<-predict(modelo,newdata = train[,c('TotalBsmtSF','MasVnrArea','YearRemodAdd','GrLivArea','WoodDeckSF')], type = "response")
+trainPred<- ifelse(trainPredict>0.5,1,0)
+confusionMatrix(as.factor(train$Economica),as.factor(trainPred))
+```
+Modelo para comparar con la predicción.
+```{r}
+#Calculo de rmse para ver si tenemos overfitting, mientras mas cercano a 0 mayor overffiting.
+rmse(test$Economica,prediccion)
