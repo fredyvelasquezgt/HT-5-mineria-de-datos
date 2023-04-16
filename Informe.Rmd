@@ -166,3 +166,4 @@ Con este modelo se busca determinar si una casa es Economica o no, utilizando la
 ggpairs(datos[,c('TotalBsmtSF','MasVnrArea','YearRemodAdd','GrLivArea','WoodDeckSF')])
 ```
 
+En el gráfico anterior se observa que la mayoria de las variables no tienen buena correlación, sobre todo la variable **WoodDeckSF**, sin embargo, las variables **MasVnrArea** y **GrLivArea** tienen una correlación medianamente correcta o por lo menos usable. Entonces se puede concluir que esta combinación de variables no es la más adecuada para el modelo, pero se quiso llegar a determinar una relacion entre areas, año de remodelacion y espacio de madera. 
