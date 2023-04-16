@@ -167,3 +167,10 @@ ggpairs(datos[,c('TotalBsmtSF','MasVnrArea','YearRemodAdd','GrLivArea','WoodDeck
 ```
 
 En el gráfico anterior se observa que la mayoria de las variables no tienen buena correlación, sobre todo la variable **WoodDeckSF**, sin embargo, las variables **MasVnrArea** y **GrLivArea** tienen una correlación medianamente correcta o por lo menos usable. Entonces se puede concluir que esta combinación de variables no es la más adecuada para el modelo, pero se quiso llegar a determinar una relacion entre areas, año de remodelacion y espacio de madera. 
+
+```{r}
+##Modelo con todas las variables
+pred<-predict(modelo,newdata = test[,c('TotalBsmtSF','MasVnrArea','YearRemodAdd','GrLivArea','WoodDeckSF')], type = "response")
+prediccion<-ifelse(pred>=0.5,1,0)
+confusionMatrix(as.factor(test$Economica),as.factor(prediccion))
+```
