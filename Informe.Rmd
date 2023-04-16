@@ -203,3 +203,5 @@ En el gráfico anterior se observa que solo 3 de las variables tienen buena corr
 
 #### 9. ¿Hay alguna forma de mejorar los modelos usando parámetros?¿ Serviría usar regularización en el caso de los modelos creados? 
 
+Como se puede observar, el modelo que mejor tuvo rendimiento fue el primero, desde que tiene una buena correlacion en sus variables hasta que tiene un porcentaje de efectividad mucho mayor.
+
