@@ -152,4 +152,17 @@ varImp(modeloIntet)
 
 Finalmente, se muestran las mejores variables para poder predecir el estado de las casas, evidenciando que *GarageArea* no es una variable útil para el modelo y esto se afirma con su correlación mostrada anteriormente, siendo mala correlación. Respecto a la variable *GarageCars* sí es útil, influyendo en la predicción del modelo, y se observa que esta variable si tiene buena correlación. E indiscutiblemente, la mejor variable de este modelo para predicir el estado de la casa es *GarageYrBlt*.
 
+#### 7.Tercer modelo
+
+```{r warning=FALSE}
+#Queremos saber si una casa es economica o no
+modelo<-glm(Economica~., data = train[,c('TotalBsmtSF','MasVnrArea','Economica','YearRemodAdd','GrLivArea','WoodDeckSF')],family = binomial(), maxit=100)
+modelo
+```
+Con este modelo se busca determinar si una casa es Economica o no, utilizando las variables **'TotalBsmtSF','MasVnrArea','Economica','YearRemodAdd','GrLivArea','WoodDeckSF'**.
+
+```{r message=FALSE, warning=FALSE}
+#Correlacion de las variables
+ggpairs(datos[,c('TotalBsmtSF','MasVnrArea','YearRemodAdd','GrLivArea','WoodDeckSF')])
+```
 
