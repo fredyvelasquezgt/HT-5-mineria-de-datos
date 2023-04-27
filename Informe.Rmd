@@ -49,11 +49,15 @@ names (datos)[83] = "Economica"
 head(datos,n=3)
 
 
+
+
 #### 2.Use los mismos conjuntos de entrenamiento y prueba que utilizó en las hojas anteriores.
 {r}
 corte <- sample(nrow(datos),nrow(datos)*porcentaje)
 train<-datos[corte,]
 test<-datos[-corte,]
+
+
 
 
 #### 3.Primer modelo
